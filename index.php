@@ -42,7 +42,7 @@
 
         
 
-        <table id="table_id" class="display">
+        <table id="myTable" class="display">
                 <thead>
         <tr>
         <th>Employee No</th>
