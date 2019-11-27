@@ -32,8 +32,8 @@
 
         // $result2 = mysqli_query($con,"SELECT * FROM dept_emp WHERE dept_no='$dept_no'");?>
         
-       <?php $result2 = "SELECT * FROM employees WHERE emp_no in (SELECT emp_no FROM dept_emp
-             WHERE dept_no='$dept_no')"; 
+       <?php $result2 = mysqli_query($con,"SELECT * FROM employees WHERE emp_no in (SELECT emp_no FROM dept_emp
+             WHERE dept_no='$dept_no')"); 
              if (!$result2) {
               printf("Error: %s\n", mysqli_error($con));
               exit();
@@ -46,7 +46,11 @@
                 <thead>
         <tr>
         <th>Employee No</th>
-        <th>Dept First Name</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Birth Date</th>
+        <th>Gender</th>
+        <th>Hire Date</th>
         
         </tr>
         </thead>
@@ -58,6 +62,10 @@
         echo "<tr>";
         echo "<td>" . $row['emp_no'] . "</td>";
         echo "<td>" . $row['first_name'] . "</td>";
+        echo "<td>" . $row['last_name'] . "</td>";
+        echo "<td>" . $row['birth_date'] . "</td>";
+        echo "<td>" . $row['gender'] . "</td>";
+        echo "<td>" . $row['hire_date'] . "</td>";
         
         echo "</tr>";
         }        
