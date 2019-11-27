@@ -1,4 +1,4 @@
-<<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Title</title>
@@ -30,8 +30,11 @@
 
         $dept_no =  $empno['dept_no'];
 
-        $result2 = mysqli_query($con,"SELECT emp_no FROM dept_emp WHERE debt_no='$dept_no'");?>
+        $result2 = mysqli_query($con,"SELECT emp_no FROM dept_emp WHERE dept_no='$dept_no'");?>
         
+
+        
+
         <table id="table_id" class="display">
                 <thead>
         <tr>
