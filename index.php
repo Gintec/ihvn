@@ -30,7 +30,7 @@
 
         $dept_no =  $empno['dept_no'];
 
-        $result2 = mysqli_query($con,"SELECT emp_no FROM dept_emp WHERE dept_no='$dept_no'");?>
+        $result2 = mysqli_query($con,"SELECT * FROM dept_emp WHERE dept_no='$dept_no'");?>
         
 
         
